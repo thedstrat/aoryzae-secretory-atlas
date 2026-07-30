@@ -1,0 +1,63 @@
+ao_locus_tag,gene_name,yeast_ortholog,function,glycosylation_role,glycosylation_role_source,glycosylation_role_confidence,subsystem,compartment
+AO090103000403,,ALG1,Dolichol pathway,n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090001000490,,ALG11,"Dolichol pathway; Glycosylation/modification , Required for asparagine-linked glycosylation ",n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090009000318,,ALG12,Dolichol pathway,n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090009000234,ALG13,ALG13,Dolichol pathway,n_glycan_assembly,liu2014_description,medium,dolichol_pathway,ER
+AO090120000461,,ALG2,"Dolichol pathway; Glycosylation/modification, mannosyltransferase ",n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090120000319,alg3,ALG3,Dolichol pathway,n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090701000739,,ALG5,"Dolichol pathway; Glycosylation/modification , dolichyl-phosphate glucosyltransferase ",n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090020000410,,ALG6,"Dolichol pathway; Glycosylation/modification , glucosyltransferase ",n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090026000526,,ALG7,"Dolichol pathway; Glycosylation/modification ,  N-acetyl-glucosaminephosphotransferase ",n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090102000146,alg8,ALG8,Dolichol pathway,n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090012000489,,ALG9,"Dolichol pathway; Glycosylation/modification , mannosyltransferase ",n_glycan_assembly,liu2014_description,medium,dolichol_pathway,unknown
+AO090005001458,,AMS1,"CPY; Vacuolar protein sorting ,  vacuolar α-mannosidase",n_glycan_trimming,liu_description_or_current_annotation,medium,cpy_pathway,vacuole
+AO090012000213,,ANP1/VAN1,Golgi processing/ERADC,golgi_mannosylation,kegg_ko,medium,golgi_processing,unknown
+AO090005000419,bst1,BST1,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090009000313,,CNE1,"Glycoprotein chaperone ClxA, protein folding; Trimming and quality control of N-glycosylated folded proteins, Calnexin—chaperone, folding clxA ",n_glycan_trimming,liu_description_or_current_annotation,medium,folding,unknown
+AO090701000141,,CWH41,"protein folding; Trimming and quality control of N-glycosylated folded proteins, alpha glucosidase I ",n_glycan_trimming,curated_multi_source_evidence,high,er_glycosylation,unknown
+AO090005001276,,CWH43,Addition of ceramides to GPI,gpi_anchor,kegg_pathway,medium,gpi_biosynthesis,ER
+AO090026000548,,DIE2,Dolichol pathway,n_glycan_assembly,liu2014,high,dolichol_pathway,unknown
+AO090003000589,,DPM1,"Dolichol pathway; Glycosylation/modification , dolichol phosphate mannose synthase ",n_glycan_assembly,liu2014,high,dolichol_pathway,ER
+AO090003000395,,GAA1,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,ER
+AO090023000750,,GAB1,GPI biosynthesis,gpi_anchor,liu2014,high,gpi_biosynthesis,unknown
+AO090005001259,,GPI1,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,ER
+AO090023000629,gpi10,GPI10,GPI biosynthesis,gpi_anchor,liu2014,high,gpi_biosynthesis,unknown
+AO090701000376,,GPI11,Man-EthNH P-transferase,gpi_anchor,kegg_pathway,medium,gpi_biosynthesis,unknown
+AO090120000381,,GPI12,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,ER
+AO090701000122,,GPI13,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090010000207,gpi14,GPI14,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090001000578,,GPI16,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,ER
+AO090005001582,,GPI17,GPI biosynthesis,gpi_anchor,liu2014,high,gpi_biosynthesis,unknown
+AO090003001092,gpi18,GPI18,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090020000206,,GPI2,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,membrane
+AO090005001186,,GPI8,GPI biosynthesis,gpi_anchor,liu2014,high,gpi_biosynthesis,ER
+AO090005000093,,GTB1,"Glucosidase II β subunit; Trimming and quality control of N-glycosylated folded proteins, glucosidase II, βSU ",n_glycan_trimming,liu_description_or_current_annotation,medium,folding,ER
+AO090005001245,gwt1,GWT1,GPI biosynthesis,gpi_anchor,liu2014,high,gpi_biosynthesis,unknown
+AO090003001503,,HOC1,"α-1,6-Mannosyltransferase",golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090010000615,,HOC1,"α-1,6-Mannosyltransferase",golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090120000208,,HOC1/OCH1,"Golgi processing; Glycosylation/modification , α-1,6-mannosyltransferase ",golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,unknown
+AO090010000465,,"KRE2, KTR1, KTR3",Golgi processing,golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090102000391,,KTR1,"α-1,2-Mannosyltransferase",golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090120000333,,KTR5,"α-1,2-Mannosyltransferase",golgi_mannosylation,liu_description_or_current_annotation,medium,,unknown
+AO090011000320,mcd4,MCD4,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090012000403,,MNN10,Golgi processing,golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090003001140,,MNN11,Golgi processing,golgi_mannosylation,liu_description_or_current_annotation,medium,golgi_processing,Golgi
+AO090003000967,,MNN4 ,"Glycosylation/modification , Regulates mannosylphosphorylation ",golgi_mannosylation,liu_description_or_current_annotation,medium,,unknown
+AO090701000814,,MNN9,ERADC,golgi_mannosylation,liu_description_or_current_annotation,medium,erad,unknown
+AO090003001225,,MNS1 ,"Glycosylation/modification , class I α-mannosidase ",n_glycan_trimming,curated_multi_source_evidence,high,er_glycosylation,unknown
+AO090038000177,,MNT2 ,"Glycosylation/modification , α-1,3-mannosyltransferase ",golgi_mannosylation,kegg_ko,medium,golgi_processing,membrane
+AO090001000698,,"OST1, OST2","Erglycosylation; Glycosylation/modification , oligosaccharyltransferase complex, αSU ",n_glycan_transfer,liu2014,high,er_glycosylation,unknown
+AO090001000747,,"OST3, OST6","Erglycosylation; Glycosylation/modification , oligosaccharyltransferase complex, γSU ",n_glycan_transfer,liu2014,high,er_glycosylation,unknown
+AO090166000087,,OST5,ERglycosylation,n_glycan_transfer,yeast_scaffold,medium,er_glycosylation,membrane
+AO090020000105,,"PMT1, PMT5",ERglycosylation,n_glycan_transfer,yeast_scaffold,medium,er_glycosylation,unknown
+AO090012001021,,"PMT2, PMT3, PMT6",ERglycosylation,n_glycan_transfer,yeast_scaffold,medium,er_glycosylation,unknown
+AO090023000336,,PMT4,"Erglycosylation; Glycosylation/modification , O-mannosyltransferase ",n_glycan_transfer,yeast_scaffold,medium,er_glycosylation,unknown
+AO090001000748,,RFT1,"Dolichol pathway; Glycosylation/modification , flippase ",n_glycan_assembly,liu2014_description,medium,dolichol_pathway,unknown
+AO090102000559,,ROT2,"protein folding; Trimming and quality control of N-glycosylated folded proteins, glucosidase II, αSU ",n_glycan_trimming,liu_description_or_current_annotation,medium,folding,ER
+AO090009000654,smp3,SMP3,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,unknown
+AO090005000980,,SPT14,GPI biosynthesis,gpi_anchor,yeast_scaffold,medium,gpi_biosynthesis,ER
+AO090103000069,,STT3,"Erglycosylation; Glycosylation/modification , oligosaccharyltransferase complex, SU ",n_glycan_transfer,liu2014,high,er_glycosylation,unknown
+AO090023000690,,SWP1,"Erglycosylation; Glycosylation/modification , oligosaccharyltransferase complex,Delta (essential) subunit",n_glycan_transfer,liu2014,high,er_glycosylation,unknown
+AO090120000250,,TED1,Cargo exit from ER,gpi_anchor,kegg_pathway,medium,gpi_biosynthesis,ER
+AO090020000468,,WBP1,"Erglycosylation; Glycosylation/modification , oligosaccharyltransferase complex, βSU",n_glycan_transfer,curated_multi_source_evidence,high,er_glycosylation,unknown
+AO090009000178,,YLR057W,"α-1,2-Mannosidase",n_glycan_trimming,curated_multi_source_evidence,high,erad,unknown

@@ -1,0 +1,263 @@
+record_id,ao_locus_tag,subsystem,subsystem_source,subsystem_confidence,subsystem_rationale,relationship_type
+AOR00002,AO090003001087,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00004,AO090103000403,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00005,AO090001000490,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00006,AO090009000318,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00007,AO090009000234,dolichol_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00008,AO090120000461,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00009,AO090120000319,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00010,AO090701000739,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00011,AO090020000410,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00012,AO090026000526,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00013,AO090102000146,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00014,AO090012000489,dolichol_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00015,AO090005001458,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00016,AO090023000901,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00017,AO090012000213,golgi_processing,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00021,AO090673000002,alp_pathway,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00022,AO090026000703,alp_pathway,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00024,AO090009000223,alp_pathway,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00025,AO090003000425,alp_pathway,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00028,AO090038000254,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00029,AO090005000978,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00033,AO090012000993,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00034,AO090038000605,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00036,AO090009000664,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00041,AO090005000437,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00043,AO090005000419,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00045,AO090012000172,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00051,AO090102000511,septin,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00052,AO090102000107,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00054,AO090023000802,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00055,AO090003001230,cpy_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00056,AO090009000313,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00058,AO090005001354,copi,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00059,AO090120000215,folding,current_annotation,medium,Specific current database function annotation.,primary
+AOR00060,AO090023000811,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00061,AO090120000486,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00062,AO090103000002,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00063,AO090011000475,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00064,AO090701000141,er_glycosylation,liu2014_description+uniprot+kegg_ko,high,Glucosidase I trims the first glucose from N-glycans in the ER; folding and ER-processing memberships are secondary context.,primary
+AOR00065,AO090005001276,gpi_biosynthesis,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00069,AO090701000076,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00070,AO090026000548,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00071,AO090010000776,hdsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00073,AO090003000589,dolichol_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00075,AO090003000467,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00077,AO090011000638,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00079,AO090038000276,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00080,AO090102000145,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00081,AO090103000412,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00082,AO090012000592,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00085,AO090102000650,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00086,AO090026000646,copi,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00087,AO090003000036,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00088,AO090011000874,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00089,AO090005000630,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00090,AO090023000834,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00091,AO090102000528,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00092,AO090005000162,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00093,AO090038000244,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00094,AO090701000797,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00095,AO090003000808,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00096,AO090011000848,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00097,AO090026000449,ldsv,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00098,AO090023000477,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00099,AO090023000516,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00100,AO090103000136,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00101,AO090005001515,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00102,AO090001000519,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00103,AO090003000395,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00104,AO090023000750,gpi_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00106,AO090009000459,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00110,AO090023000956,tc,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00111,AO090003000688,tc,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00115,AO090038000376,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00117,AO090005001259,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00118,AO090023000629,gpi_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00119,AO090701000376,gpi_biosynthesis,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00120,AO090120000381,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00121,AO090701000122,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00122,AO090010000207,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00123,AO090001000578,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00124,AO090005001582,gpi_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00125,AO090003001092,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00126,AO090020000206,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00127,AO090005001186,gpi_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00129,AO090005000093,folding,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00130,AO090005001245,gpi_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00131,AO090124000074,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00132,AO090023000840,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00134,AO090003001503,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00135,AO090010000615,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00136,AO090120000208,golgi_processing,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00137,AO090005000658,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00138,AO090003000492,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00140,AO090102000620,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00141,AO090011000764,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00142,AO090009000400,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00143,AO090020000450,translation,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00145,AO090005000934,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00146,AO090020000010,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00147,AO090003000257,folding,curated_liu_composite,high,KAR2/BiP is the primary ER Hsp70 folding chaperone; its ERAD contribution is secondary quality-control context.,primary
+AOR00149,AO090005001632,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00150,AO090009000291,golgi_processing,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00151,AO090010000465,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00152,AO090011000515,beta_1_6_glucan_biosynthesis,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00153,AO090102000391,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00155,AO090005001222,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00157,AO090011000320,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00159,AO090038000608,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00160,AO090012000403,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00161,AO090003001140,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00163,AO090701000814,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00164,AO090003000057,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00165,AO090003001225,er_glycosylation,liu2014_description+uniprot+kegg_ko,high,Class I alpha-mannosidase (KO K01230) performs ER N-glycan mannose trimming; ER quality control is a secondary role.,primary
+AOR00166,AO090038000177,golgi_processing,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00167,AO090003000829,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00168,AO090011000579,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00175,AO090005000811,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00176,AO090023000485,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00177,AO090038000451,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00178,AO090009000257,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00179,AO090001000698,er_glycosylation,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00180,AO090001000747,er_glycosylation,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00181,AO090166000087,er_glycosylation,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00184,AO090001000733,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00185,AO090120000344,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00186,AO090010000769,cpy_pathway,current_annotation,medium,Specific current database function annotation.,primary
+AOR00189,AO090001000706,golgi_processing,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00190,AO090020000105,er_glycosylation,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00191,AO090012001021,er_glycosylation,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00192,AO090023000336,er_glycosylation,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00193,AO090005001528,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00196,AO090005000157,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00208,AO090009000655,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00210,AO090011000535,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00211,AO090003001085,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00212,AO090005001114,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00213,AO090011000777,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00214,AO090001000748,dolichol_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00216,AO090102000559,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00217,AO090003000947,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00225,AO090003000397,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00231,AO090005001643,golgi_processing,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00233,AO090003000842,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00234,AO090003000853,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00235,AO090038000586,folding,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00238,AO090010000771,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00239,AO090012000838,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00240,AO090023000986,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00242,AO090701000006,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00243,AO090701000149,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00244,AO090026000347,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00245,AO090005000718,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00246,,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00247,AO090026000599,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00248,AO090701000139,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00249,AO090005000760,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00250,AO090003000403,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00251,AO090038000308,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00252,AO090011000577,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00253,AO090012000556,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00254,AO090003000913,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00255,AO090026000337,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00256,AO090206000003,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00257,AO090012000630,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00258,AO090003001162,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00259,AO090701000730,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00260,AO090026000361,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00261,AO090005001238,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00262,AO090005000120,tc,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00263,AO090103000044,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00264,AO090005000435,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00265,AO090701000291,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00267,AO090701000719,ldsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00268,AO090020000134,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00270,AO090005001279,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00271,AO090038000454,tc,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00272,AO090003001273,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00273,AO090003000363,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00278,AO090009000654,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00279,AO090012000430,snare,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00280,AO090023000164,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00281,AO090005000615,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00282,AO090102000523,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00284,AO090005000980,gpi_biosynthesis,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00285,AO090701000163,tc,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00286,AO090011000933,tc,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00287,AO090011000469,tc,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00288,AO090120000351,tc,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00289,AO090102000593,tc,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00290,AO090003000956,tc,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00291,AO090003001205,tc,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00292,AO090012000995,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00293,AO090011000513,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00294,AO090103000007,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00295,AO090113000129,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00296,AO090010000311,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00297,AO090005001482,golgi_processing,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00298,AO090038000562,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00299,AO090103000069,er_glycosylation,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00301,AO090020000592,hdsv,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00302,AO090023000690,er_glycosylation,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00303,AO090012000240,snare,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00305,AO090120000250,gpi_biosynthesis,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00306,AO090102000487,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00307,AO090003001228,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00309,AO090012000873,folding,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00311,AO090011000833,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00312,AO090120000403,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00313,AO090701000012,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00318,AO090012000248,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00319,AO090701000588,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00320,AO090102000609,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00321,AO090103000399,hdsv,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00323,AO090011000379,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00324,AO090005000853,erad,yeast_scaffold,medium,Unique match in the original yeast secretory-system scaffold.,primary
+AOR00325,AO090023000839,folding,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00326,AO090011000678,snare,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00328,AO090026000428,folding,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00331,AO090023000864,alp_pathway,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00332,AO090026000605,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00333,AO090011000398,hdsv,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00334,AO090102000348,hdsv,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00335,AO090113000006,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00336,AO090701000263,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00338,AO090012000925,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00339,AO090026000225,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00340,AO090003000586,cpy_pathway,current_annotation,medium,Specific current database function annotation.,primary
+AOR00341,AO090005001298,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00342,AO090003000675,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00343,AO090701000053,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00344,AO090009000311,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00345,AO090003000939,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00347,AO090003000972,cpy_pathway,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00351,AO090003001144,snare,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00352,AO090020000468,er_glycosylation,liu2014_description+uniprot+kegg_ko,high,"WBP1 is the ER oligosaccharyltransferase beta subunit (KO K12670), making N-glycan transfer its most specific function.",primary
+AOR00354,AO090003000801,folding,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00355,AO090003000506,folding,kegg_pathway,low,"Single mapped KEGG pathway; broad, low-confidence placement.",primary
+AOR00356,AO090701000164,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00357,AO090003000038,copii,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00358,AO090023000584,snare,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00359,AO090009000178,erad,aspergillus_homolog+uniprot+yeast_ortholog+kegg_ko,medium,The A. oryzae protein is a class I alpha-mannosidase (KO K01230); its MNL2 ortholog is ER-localized and functions in ERAD quality control.,primary
+AOR00360,AO090005000158,putative_mitochondria_protein,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00362,AO090023000334,erad,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00363,AO090102000638,copii,liu2014_description,medium,Specific function stated in Liu 2014 description.,primary
+AOR00364,AO090005000880,copi,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00368,AO090005000965,mitochondrial_m_aaa_protease,liu2014,high,Verified Liu 2014 Table S1 subsystem.,primary
+AOR00017,AO090012000213,erad,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00041,AO090005000437,snare,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00064,AO090701000141,folding,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00132,AO090023000840,folding,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00147,AO090003000257,erad,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00165,AO090003001225,folding,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00234,AO090003000853,erad,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00245,AO090005000718,hdsv,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00245,AO090005000718,ldsv,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00245,AO090005000718,cpy_pathway,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00245,AO090005000718,alp_pathway,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00248,AO090701000139,snare,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00331,AO090023000864,snare,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00352,AO090020000468,folding,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary
+AOR00359,AO090009000178,er_glycosylation,liu2014_composite_or_functional_context,medium,Secondary role explicitly present in Liu's composite description or supported by reviewed functional context.,secondary

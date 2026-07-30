@@ -1,0 +1,22 @@
+# Raw API responses - do NOT commit.
+# KEGG licensing restricts redistribution of bulk data.
+data/raw/
+data/interim/
+
+# Generated outputs (commit deliberately, when versioned)
+data/*.parquet
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+.ipynb_checkpoints/
+.jupyter-config/
+.jupyter-data/
+.jupyter-runtime/
+.DS_Store
+.vscode/
+
+# Notebook outputs bloat diffs. Consider: pip install nbstripout && nbstripout --install

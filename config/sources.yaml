@@ -1,0 +1,104 @@
+# =============================================================================
+# Source configuration. Kept even though config.py was deleted - this is the
+# reproducibility record: endpoints, organism IDs, assembly, retrieval dates.
+# Load it in the notebook with: yaml.safe_load(open("../config/sources.yaml"))
+# =============================================================================
+
+organism:
+  name: "Aspergillus oryzae RIB40"
+  taxon_id: 510516                     # RIB40 strain (NOT 5062, the species)
+  kegg_org: "aor"                      # VERIFY: rest.kegg.jp/list/organism
+  uniprot_proteome: null               # pin this; find at uniprot.org/proteomes
+  ncbi_assembly: "GCF_000184455.2"     # ASM18445v3 - current RefSeq
+
+retrieval:
+  # Fill in when you run notebook 02. Databases move; record what you used.
+  uniprot_release: null
+  kegg_accessed: null
+  ncbi_accessed: null
+
+sources:
+  uniprot:
+    base_url: "https://rest.uniprot.org/uniprotkb/search"
+    page_size: 500
+    fields:
+      - accession
+      - gene_primary
+      - gene_names
+      - protein_name
+      - xref_kegg
+      - xref_geneid
+      - go_id
+      - cc_subcellular_location
+      - protein_existence
+      - reviewed
+      - sequence
+
+  kegg:
+    base_url: "https://rest.kegg.jp"
+    rate_limit_seconds: 1.0
+    pathways:
+      secretory:
+        - "04141"   # Protein processing in endoplasmic reticulum
+        - "03060"   # Protein export
+        - "04130"   # SNARE interactions in vesicular transport
+      glycosylation:
+        - "00510"   # N-glycan biosynthesis
+        - "00513"   # Various types of N-glycan biosynthesis
+        - "00512"   # Mucin type O-glycan biosynthesis
+        - "00563"   # GPI-anchor biosynthesis
+        - "00514"   # Other types of O-glycan biosynthesis
+
+  liu2014:
+    doi: "10.1186/1752-0509-8-73"
+    components_path: "data/interim/liu_components_raw_cleaned.csv"
+    clients_path: "data/interim/liu_clients_raw_cleaned.csv"
+
+# KO numbers for glycosylation families. Look up once at
+# https://www.genome.jp/kegg/ko.html and fill in. Use KO, NOT gene symbols -
+# most A. oryzae genes have no symbol at all.
+glycosylation_ko:
+  n_glycan_assembly:               # ALG/DPM/RFT dolichol-linked precursor assembly
+    - "ko:K00721"                 # DPM1
+    - "ko:K00729"                 # ALG5
+    - "ko:K01001"                 # ALG7
+    - "ko:K03842"                 # ALG1
+    - "ko:K03843"                 # ALG2
+    - "ko:K03844"                 # ALG11
+    - "ko:K03845"                 # ALG3
+    - "ko:K03846"                 # ALG9
+    - "ko:K03847"                 # ALG12
+    - "ko:K03848"                 # ALG6
+    - "ko:K03849"                 # ALG8
+    - "ko:K03850"                 # ALG10/DIE2
+    - "ko:K06316"                 # RFT1
+    - "ko:K07432"                 # ALG13
+  n_glycan_transfer:               # fungal oligosaccharyltransferase complex
+    - "ko:K07151"                 # STT3
+    - "ko:K12666"                 # OST1/2
+    - "ko:K12667"                 # SWP1
+    - "ko:K12669"                 # OST3/6
+    - "ko:K12670"                 # WBP1
+  golgi_mannosylation:             # OCH1, MNN, KTR and related Golgi enzymes
+    - "ko:K03854"                 # KTR family
+    - "ko:K05528"                 # OCH1
+    - "ko:K05529"                 # MNN9
+    - "ko:K05531"                 # MNN10
+    - "ko:K05532"                 # MNN11
+    - "ko:K05533"                 # ANP1/VAN1
+    - "ko:K10967"                 # KRE2/KTR
+    - "ko:K10968"                 # MNT2-family mannosyltransferase
+  o_glycosylation:
+    - "ko:K00728"                 # PMT O-mannosyltransferases
+
+# Broad KEGG pathway membership fallback for machinery rows that have no Liu
+# subsystem. Values must be existing normalized keys in SUBSYSTEM_ORDER.
+kegg_pathway_to_subsystem:
+  aor04141: folding                 # Protein processing in endoplasmic reticulum
+  aor03060: tc                      # Protein export
+  aor04130: snare                   # SNARE interactions in vesicular transport
+  aor00510: er_glycosylation        # N-glycan biosynthesis
+  aor00513: er_glycosylation        # Various types of N-glycan biosynthesis
+  aor00512: golgi_processing        # Mucin type O-glycan biosynthesis
+  aor00563: gpi_biosynthesis        # GPI-anchor biosynthesis
+  aor00514: golgi_processing        # Other types of O-glycan biosynthesis

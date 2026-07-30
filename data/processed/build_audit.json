@@ -1,0 +1,41 @@
+{
+  "machinery_rows": 369,
+  "client_rows": 2269,
+  "machinery_mapping_status": {
+    "exact": 367,
+    "unresolved": 1,
+    "ambiguous": 1
+  },
+  "client_mapping_status": {
+    "exact": 2268,
+    "unresolved": 1
+  },
+  "machinery_with_uniprot": 366,
+  "machinery_with_ncbi": 284,
+  "machinery_with_kegg_gene": 348,
+  "machinery_with_ko": 330,
+  "kegg_pathway_membership_rows": 196,
+  "machinery_with_subsystem": 247,
+  "machinery_subsystem_source": {
+    "unassigned": 122,
+    "liu2014": 108,
+    "liu2014_description": 74,
+    "yeast_scaffold": 44,
+    "kegg_pathway": 13,
+    "current_annotation": 3,
+    "liu2014_description+uniprot+kegg_ko": 3,
+    "curated_liu_composite": 1,
+    "aspergillus_homolog+uniprot+yeast_ortholog+kegg_ko": 1
+  },
+  "subsystem_conflict_rows": 5,
+  "machinery_with_glycosylation_role": 62,
+  "transcriptomic_shortlist_rows": 51,
+  "flagged_rows": 3,
+  "important_limitations": [
+    "KEGG organism validation now uses the valid HTTPS /list/aor request; KO values remain blank when KEGG supplies no link",
+    "Broad KEGG pathway membership is a coarse subsystem proxy and should be reviewed before biological interpretation",
+    "A glycosylation_role of none means not assigned in this pass, not experimentally proven absent",
+    "Functional evidence is not upgraded by transcriptomic significance",
+    "Conflicting UniProt candidates are withheld and flagged rather than selected automatically"
+  ]
+}
