@@ -93,6 +93,19 @@ def test_machinery_identifiers_and_orthologs_are_verbatim(source_and_final):
     assert left == right
 
 
+def test_row_level_liu_provenance_is_complete(source_and_final):
+    source, final, _ = source_and_final
+    expected_raw = source[["1st SOURCE", "2nd SOURCE", "3rd SOURCE", "4th SOURCE"]].apply(
+        lambda row: "|".join("" if pd.isna(value) else str(value) for value in row), axis=1
+    )
+    assert final.liu_source_raw.fillna("").tolist() == expected_raw.tolist()
+    assert final.liu_table_row.tolist() == [f"S1:{row}" for row in range(3, 372)]
+
+    clients = pd.read_csv(PROJECT_ROOT / "data/processed/aoryzae_secretory_clients.csv")
+    assert clients.liu_source_raw.isna().all()
+    assert clients.liu_table_row.tolist() == [f"S3:{row}" for row in range(3, 2272)]
+
+
 def test_liu_subsystems_are_normalized_from_the_source_cell(source_and_final):
     _, _, joined = source_and_final
     normalized = {

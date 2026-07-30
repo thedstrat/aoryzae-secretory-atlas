@@ -3,6 +3,10 @@
 The schema is a contract. These assert it stays coherent as fields get added.
 """
 
+from pathlib import Path
+
+import pandas as pd
+
 from atlas.schema import (
     COLUMN_ORDER, DATA_DICTIONARY, REQUIRED_FIELDS, SUBSYSTEM_ORDER,
     GeneRecord, GlycosylationRole, MappingStatus, RecordOrigin, RecordType,
@@ -18,6 +22,21 @@ def test_every_column_has_a_definition():
 def test_no_orphan_definitions():
     orphans = set(DATA_DICTIONARY) - set(COLUMN_ORDER)
     assert not orphans, f"documented but not in COLUMN_ORDER: {sorted(orphans)}"
+
+
+def test_data_dictionary_has_structured_provenance():
+    required = {"definition", "allowed_values", "source"}
+    for name, entry in DATA_DICTIONARY.items():
+        assert set(entry) == required, f"{name}: incomplete dictionary metadata"
+        assert entry["source"] in {"Liu 2014", "fetched", "generated"}
+        assert all(str(entry[key]).strip() for key in required)
+
+
+def test_exported_column_descriptions_match_schema():
+    root = Path(__file__).resolve().parents[1]
+    exported = pd.read_csv(root / "data/processed/column_descriptions.csv").fillna("")
+    expected = pd.DataFrame([{"field": field, **entry} for field, entry in DATA_DICTIONARY.items()]).fillna("")
+    pd.testing.assert_frame_equal(exported, expected, check_dtype=False)
 
 
 def test_record_serialises_to_every_column():
