@@ -19,7 +19,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 @pytest.fixture(scope="module")
 def source_and_final():
     source = pd.read_csv(PROJECT_ROOT / "data/interim/liu_components_raw_cleaned.csv")
-    final = pd.read_csv(PROJECT_ROOT / "data/processed/aoryzae_secretory_components.csv")
+    final = pd.read_csv(PROJECT_ROOT / "data/processed/secretion_machinery_genes.csv")
     joined = final.merge(source, left_on="liu_ao_locus_tag", right_on="ID",
                          how="left", validate="one_to_one", suffixes=("_final", "_liu"))
     assert len(joined) == 369
@@ -101,7 +101,7 @@ def test_row_level_liu_provenance_is_complete(source_and_final):
     assert final.liu_source_raw.fillna("").tolist() == expected_raw.tolist()
     assert final.liu_table_row.tolist() == [f"S1:{row}" for row in range(3, 372)]
 
-    clients = pd.read_csv(PROJECT_ROOT / "data/processed/aoryzae_secretory_clients.csv")
+    clients = pd.read_csv(PROJECT_ROOT / "data/processed/secreted_proteins_predicted.csv")
     assert clients.liu_source_raw.isna().all()
     assert clients.liu_table_row.tolist() == [f"S3:{row}" for row in range(3, 2272)]
 
@@ -145,7 +145,7 @@ def test_transcriptomic_flags_recompute_per_gene(source_and_final):
 
 def test_shortlist_per_gene_and_aggregate_contract(source_and_final):
     _, final, _ = source_and_final
-    shortlist = pd.read_csv(PROJECT_ROOT / "data/processed/transcriptomic_shortlist.csv")
+    shortlist = pd.read_csv(PROJECT_ROOT / "data/processed/high_secretion_responsive_genes.csv")
     expected = final.loc[final.sig_all_three.astype(bool), "liu_ao_locus_tag"]
     assert set(shortlist.ao_locus_tag) == set(expected)
     assert len(shortlist) == 51
@@ -154,7 +154,7 @@ def test_shortlist_per_gene_and_aggregate_contract(source_and_final):
 
 def test_composite_liu_descriptions_keep_primary_rationale_and_secondary_roles(source_and_final):
     _, final, _ = source_and_final
-    relationships = pd.read_csv(PROJECT_ROOT / "data/processed/gene_subsystems.csv")
+    relationships = pd.read_csv(PROJECT_ROOT / "data/processed/gene_pathway_roles.csv")
     expected_secondary = {
         "AO090012000213": {"erad"}, "AO090005000437": {"snare"},
         "AO090023000840": {"folding"}, "AO090003000257": {"erad"},

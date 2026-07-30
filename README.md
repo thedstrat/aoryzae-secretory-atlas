@@ -7,8 +7,9 @@ A traceable, current map of the machinery *Aspergillus oryzae* uses to fold, gly
 | File | Purpose |
 |---|---|
 | [`pathway_overview.svg`](data/processed/pathway_overview.svg) | Primary pathway placement with unassigned genes shown explicitly. |
-| [`transcriptomic_shortlist.csv`](data/processed/transcriptomic_shortlist.csv) | The 51 machinery genes consistently changed in all three secretion strains. |
-| [`aoryzae_secretory_components.csv`](data/processed/aoryzae_secretory_components.csv) | The complete 369-gene machinery atlas, one biological gene per row. |
+| [`FINDINGS.md`](data/processed/FINDINGS.md) | A concise, evidence-bounded interpretation of the current atlas. |
+| [`high_secretion_responsive_genes.csv`](data/processed/high_secretion_responsive_genes.csv) | The 51 machinery genes consistently changed in all three secretion strains. |
+| [`secretion_machinery_genes.csv`](data/processed/secretion_machinery_genes.csv) | The complete 369-gene machinery atlas, one biological gene per row. |
 | [`column_descriptions.csv`](data/processed/column_descriptions.csv) | Definitions, allowed values, and provenance for every atlas column. |
 
 ![A. oryzae secretory pathway overview](data/processed/pathway_overview.png)
@@ -51,28 +52,29 @@ Remaining gaps:
 
 | File | Grain | Contents |
 |---|---|---|
-| `aoryzae_secretory_components.csv` | One row per machinery gene | The complete 369-gene atlas with identifiers, annotations, expression flags, and provenance. |
-| `aoryzae_secretory_clients.csv` | One row per predicted client gene | The 2,269 predicted cargo proteins, kept separate from machinery. |
-| `transcriptomic_shortlist.csv` | One row per responsive machinery gene | The 51 genes significant in all three Liu comparisons. |
-| `glycosylation_components.csv` | One row per machinery gene with an assigned glycosylation role | Conservative assembly, transfer, trimming, Golgi, O-glycosylation, and GPI annotations. |
-| `gene_subsystems.csv` | One row per gene–subsystem relationship | Primary placements plus documented secondary roles and cross-links. |
-| `identifier_crosswalk.csv` | One row per gene–identifier mapping | Current locus, UniProt, KEGG, and NCBI identifier links, including alternate candidates. |
-| `pathway_nodes.csv` | One row per machinery gene | Primary visualization placement and secondary-subsystem labels. |
+| `secretion_machinery_genes.csv` | One row per machinery gene | The complete 369-gene atlas with identifiers, annotations, expression flags, and provenance. |
+| `secreted_proteins_predicted.csv` | One row per predicted client gene | The 2,269 predicted cargo proteins, kept separate from machinery. |
+| `high_secretion_responsive_genes.csv` | One row per responsive machinery gene | The 51 genes significant in all three Liu comparisons. |
+| `glycosylation_genes.csv` | One row per machinery gene with an assigned glycosylation role | Conservative assembly, transfer, trimming, Golgi, O-glycosylation, and GPI annotations. |
+| `gene_pathway_roles.csv` | One row per gene–subsystem relationship | Primary placements plus documented secondary roles and cross-links. |
+| `gene_id_mapping.csv` | One row per gene–identifier mapping | Current locus, UniProt, KEGG, and NCBI identifier links, including alternate candidates. |
+| `pathway_diagram_data.csv` | One row per machinery gene | Primary visualization placement and secondary-subsystem labels. |
 | `pathway_overview.svg` | One diagram per build | Standalone vector overview with definitions, counts, citation, confidence note, and build date. |
 | `pathway_overview.png` | One diagram per build | GitHub-friendly raster rendering of the same overview. |
 | `column_descriptions.csv` | One row per output field | Data dictionary generated from `atlas/schema.py`, including vocabulary and provenance. |
+| `FINDINGS.md` | One interpretation per build | Human-readable response pattern, candidates, complex checks, absent responses, and limitations. |
 
 ### Quality assurance (`data/processed/qa/`)
 
 | File | Grain | Contents |
 |---|---|---|
 | `build_audit.json` | One record per build | Machine-readable counts, coverage, and important limitations. |
-| `annotation_summary.md` | One summary per build | Human-readable release coverage, evidence order, and remaining gaps. |
-| `manual_review_queue.csv` | One row per reviewed source record | All unresolved identifiers and conflicting annotations requiring review. |
+| `coverage_summary.md` | One summary per build | Human-readable release coverage, evidence order, and remaining gaps. |
+| `genes_needing_review.csv` | One row per reviewed source record | All unresolved identifiers and conflicting annotations requiring review. |
 | `subsystem_assignment_audit.csv` | One row per machinery gene | Primary evidence plus rejected subsystem candidates not retained in the component table. |
-| `source_fidelity_sample.csv` | One row per sampled machinery gene | Twenty original Liu rows beside their derived atlas fields for inspection. |
+| `liu_vs_atlas_sample.csv` | One row per sampled machinery gene | Twenty original Liu rows beside their derived atlas fields for inspection. |
 
-`unresolved_identifiers.csv` was consolidated into `manual_review_queue.csv`: its three records were a strict subset of the nine-row review queue.
+`unresolved_identifiers.csv` was consolidated into `genes_needing_review.csv`: its three records were a strict subset of the nine-row review queue.
 
 `subsystem_assignment_audit.csv` is retained because six rows record rejected or conflicting subsystem candidates and evidence summaries that are not present in the component table.
 
