@@ -49,30 +49,32 @@ Remaining gaps:
 
 ### Deliverables (`data/processed/`)
 
-| File | Contents |
-|---|---|
-| `aoryzae_secretory_components.csv` | 369 machinery genes with identifiers, annotations, expression flags, and row-level provenance. |
-| `aoryzae_secretory_clients.csv` | 2,269 predicted cargo proteins, kept structurally separate from machinery. |
-| `transcriptomic_shortlist.csv` | Readable 51-gene machinery shortlist. |
-| `glycosylation_components.csv` | Genes with a conservatively assigned glycosylation role. |
-| `gene_subsystems.csv` | One row per gene–subsystem relationship, including secondary roles. |
-| `identifier_crosswalk.csv` | Current locus, UniProt, KEGG, and NCBI identifier links. |
-| `pathway_nodes.csv` | One primary visualization node per machinery gene, plus secondary labels. |
-| `pathway_overview.svg` | Vector pathway overview. |
-| `pathway_overview.png` | GitHub-friendly raster rendering of the pathway overview. |
-| `column_descriptions.csv` | Machine-readable data dictionary generated from `atlas/schema.py`. |
+| File | Grain | Contents |
+|---|---|---|
+| `aoryzae_secretory_components.csv` | One row per machinery gene | The complete 369-gene atlas with identifiers, annotations, expression flags, and provenance. |
+| `aoryzae_secretory_clients.csv` | One row per predicted client gene | The 2,269 predicted cargo proteins, kept separate from machinery. |
+| `transcriptomic_shortlist.csv` | One row per responsive machinery gene | The 51 genes significant in all three Liu comparisons. |
+| `glycosylation_components.csv` | One row per machinery gene with an assigned glycosylation role | Conservative assembly, transfer, trimming, Golgi, O-glycosylation, and GPI annotations. |
+| `gene_subsystems.csv` | One row per gene–subsystem relationship | Primary placements plus documented secondary roles and cross-links. |
+| `identifier_crosswalk.csv` | One row per gene–identifier mapping | Current locus, UniProt, KEGG, and NCBI identifier links, including alternate candidates. |
+| `pathway_nodes.csv` | One row per machinery gene | Primary visualization placement and secondary-subsystem labels. |
+| `pathway_overview.svg` | One diagram per build | Standalone vector overview with definitions, counts, citation, confidence note, and build date. |
+| `pathway_overview.png` | One diagram per build | GitHub-friendly raster rendering of the same overview. |
+| `column_descriptions.csv` | One row per output field | Data dictionary generated from `atlas/schema.py`, including vocabulary and provenance. |
 
 ### Quality assurance (`data/processed/qa/`)
 
-| File | Contents |
-|---|---|
-| `build_audit.json` | Build counts, coverage, and important limitations. |
-| `annotation_summary.md` | Short release summary. |
-| `manual_review_queue.csv` | All unresolved identifiers and conflicting annotations requiring review. |
-| `subsystem_assignment_audit.csv` | Per-gene subsystem evidence and confidence. |
-| `source_fidelity_sample.csv` | Twenty source-versus-derived rows for human inspection. |
+| File | Grain | Contents |
+|---|---|---|
+| `build_audit.json` | One record per build | Machine-readable counts, coverage, and important limitations. |
+| `annotation_summary.md` | One summary per build | Human-readable release coverage, evidence order, and remaining gaps. |
+| `manual_review_queue.csv` | One row per reviewed source record | All unresolved identifiers and conflicting annotations requiring review. |
+| `subsystem_assignment_audit.csv` | One row per machinery gene | Primary evidence plus rejected subsystem candidates not retained in the component table. |
+| `source_fidelity_sample.csv` | One row per sampled machinery gene | Twenty original Liu rows beside their derived atlas fields for inspection. |
 
 `unresolved_identifiers.csv` was consolidated into `manual_review_queue.csv`: its three records were a strict subset of the nine-row review queue.
+
+`subsystem_assignment_audit.csv` is retained because six rows record rejected or conflicting subsystem candidates and evidence summaries that are not present in the component table.
 
 ## What a row looks like
 
