@@ -14,13 +14,12 @@
   "machinery_subsystem_source": {
     "unassigned": 122,
     "liu2014": 108,
-    "liu2014_description": 74,
+    "liu2014_description": 77,
     "yeast_scaffold": 44,
     "kegg_pathway": 13,
     "current_annotation": 3,
-    "liu2014_description+uniprot+kegg_ko": 3,
     "curated_liu_composite": 1,
-    "aspergillus_homolog+uniprot+yeast_ortholog+kegg_ko": 1
+    "aspergillus_homolog": 1
   },
   "subsystem_conflict_rows": 5,
   "machinery_with_glycosylation_role": 62,

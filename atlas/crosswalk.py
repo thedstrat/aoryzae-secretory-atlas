@@ -284,7 +284,7 @@ def resolve_by_locus_tag(
 
     hit = merged["_merge"] == "both"
     merged.loc[hit, "mapping_status"] = MappingStatus.EXACT.value
-    merged.loc[hit, "mapping_method"] = "direct AO090 locus-tag match"
+    merged.loc[hit, "mapping_method"] = "direct_locus_tag"
 
     # One seed row fanning out to several crosswalk rows. Two real causes:
     # a split gene model, or several protein products (isoforms) for one gene.
@@ -294,13 +294,10 @@ def resolve_by_locus_tag(
     n_matches = merged.groupby("record_id")["record_id"].transform("size")
     ambiguous = hit & (n_matches > 1)
     merged.loc[ambiguous, "mapping_status"] = MappingStatus.AMBIGUOUS.value
-    merged.loc[ambiguous, "mapping_method"] = (
-        "locus tag matched multiple current records - split gene model or "
-        "multiple protein products"
-    )
+    merged.loc[ambiguous, "mapping_method"] = "ambiguous"
 
     merged["manual_review_required"] = ambiguous
-    merged.loc[~hit, "mapping_method"] = "no current locus tag found; try step 2"
+    merged.loc[~hit, "mapping_method"] = "unresolved"
     merged = merged.drop(columns=["_merge"])
 
     total = merged["_tag"].nunique()

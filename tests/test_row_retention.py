@@ -42,6 +42,16 @@ def test_liu_evidence_sources_are_normalized(source_and_final):
     ).all()
 
 
+def test_controlled_provenance_vocabularies(source_and_final):
+    _, final, _ = source_and_final
+    assert set(final.mapping_method) <= {
+        "direct_locus_tag", "cross_reference", "sequence", "orthology",
+        "ambiguous", "split", "merged", "unresolved",
+    }
+    assert not final.subsystem_source.str.contains("+", regex=False).any()
+    assert final.citation.eq("10.1186/1752-0509-8-73").all()
+
+
 def test_every_source_row_gets_a_record_id():
     seed = pd.DataFrame({"liu_ao_locus_tag": ["A", "B", "C", None]})
     out = make_record_ids(seed)

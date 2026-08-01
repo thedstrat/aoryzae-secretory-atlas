@@ -6,9 +6,9 @@ liu_source_raw,"The four Liu Table S1 SOURCE cells in order, joined with pipes w
 liu_table_row,Table S1 physical workbook row.,free text (S1:n),Liu 2014
 gene_name,Current accepted A. oryzae gene symbol where available.,free text or blank,fetched
 function,Plain-English function selected from the Liu description or current annotation.,free text or blank,generated
-record_type,Identifies rows as secretion-machinery components.,machinery_component,generated
+record_type,Retained as an explicit grain marker so machinery rows cannot be mistaken for or silently mixed with other biological record types.,machinery_component,generated
 subsystem,Primary pathway subsystem used for diagram placement.,tc | dolichol_pathway | er_glycosylation | folding | gpi_biosynthesis | erad | copii | copi | golgi_processing | ldsv | hdsv | cpy_pathway | alp_pathway | snare | septin | beta_1_6_glucan_biosynthesis | translation | putative_mitochondria_protein | mitochondrial_m_aaa_protease | blank,generated
-subsystem_source,Evidence route used for the primary subsystem.,liu2014 | liu2014_description | yeast_scaffold | current_annotation | kegg_pathway | curated_liu_composite | liu2014_description+uniprot+kegg_ko | aspergillus_homolog+uniprot+yeast_ortholog+kegg_ko | unassigned,generated
+subsystem_source,Primary evidence route used for the subsystem; supporting evidence chains are recorded in subsystem_rationale.,liu2014 | liu2014_description | yeast_scaffold | current_annotation | kegg_pathway | curated_liu_composite | aspergillus_homolog | unassigned,generated
 subsystem_confidence,Confidence in the primary subsystem assignment.,high | medium | low,generated
 subsystem_rationale,Short explanation for the primary subsystem assignment.,free text,generated
 secondary_subsystem,Reviewed secondary pathway role retained without duplicating the gene row.,subsystem value or blank,generated
@@ -25,9 +25,9 @@ direction_all_three,Shared log-fold-change direction when significant in all thr
 record_origin,Origin of the biological record.,liu2014 | post_2014_literature | new_orthology_inference,generated
 evidence_source,Normalized strength/type of functional evidence.,a_oryzae_experimental | a_oryzae_transcriptomic | aspergillus_homolog | yeast_inference | database_prediction | unknown,generated
 yeast_ortholog,S. cerevisiae ortholog exactly as recorded by Liu.,free text or blank,Liu 2014
-citation,Publication supporting the record.,free text (DOI or PMID) or blank,generated
+citation,Liu 2014 DOI supporting every machinery record.,10.1186/1752-0509-8-73,Liu 2014
 mapping_status,Outcome of current-identifier resolution.,exact | cross_reference | sequence | orthology | ambiguous | split | merged | unresolved,generated
-mapping_method,Controlled explanation of identifier resolution.,direct AO090 locus-tag match | direct AO090 match in UniProt cross-reference | AO090 tag has multiple UniProt candidates; no candidate selected | no current locus tag found; try step 2 | no current AO090 cross-reference found,generated
+mapping_method,"Short identifier-resolution method: direct_locus_tag is an exact current tag match; cross_reference, sequence, and orthology name alternate resolution routes; ambiguous, split, and merged flag non-unique model changes; unresolved means no current record was selected.",direct_locus_tag | cross_reference | sequence | orthology | ambiguous | split | merged | unresolved,generated
 manual_review_required,Whether automated evidence requires human review.,true | false,generated
 uniprot_accession,Current UniProt accession.,free text or blank,fetched
 kegg_gene_id,KEGG gene identifier.,free text (aor:AO090...) or blank,fetched
