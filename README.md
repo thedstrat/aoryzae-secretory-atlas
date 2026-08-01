@@ -43,6 +43,10 @@ The pathway diagram shows where Liu's genes fit in secretion and how many respon
 | **2. Update the gene IDs** | Liu's gene identifiers are from 2014. Match each one to its current entry in UniProt, KEGG, and NCBI so the genes can be looked up in today's tools. | A mapping table connecting old IDs to current ones |
 | **3. Build the atlas** | Add each gene's stage in the secretion pathway, its location in the cell, its glycosylation role, and a record of how confident we are and why. | The final gene table, the 51-gene shortlist, and the pathway diagram |
 
+### Where the atlas fields come from
+
+The atlas combines three kinds of information: **original Liu 2014 data** such as the old gene ID, description, yeast ortholog, and expression results; **current database information** such as modern gene IDs, protein names, KEGG groups, and updated annotations; and **project-generated labels** that organize those sources into a consistent format. Those generated labels include the gene's **subsystem**, **pathway stage**, **glycosylation role**, **evidence type**, **mapping status**, and a short **rationale** explaining why the label was assigned. These values are produced from documented rules rather than invented. Direct database links are preferred for ID mapping, sequence comparison is used when an authoritative source sequence is available, and unclear cases are flagged for manual review rather than forced into a match.
+
 The original supplementary inputs are retained under [`data/raw/liu2014/`](data/raw/liu2014/); see its README for provenance.
 
 ## Project status
@@ -89,7 +93,9 @@ The full dictionary is in [`column_descriptions.csv`](data/processed/column_desc
 
 ## Verification
 
-Row-level tests join all 369 machinery records back to Liu's retained source cells and verify locus tags, yeast orthologs, direct subsystem normalization, functions, significance, direction, shortlist membership, and composite-label handling. Run:
+Tests confirm that all 369 Liu records are preserved and that source-derived and generated fields are processed consistently.
+
+The gene-ID crosswalk was also checked independently against freshly retrieved NCBI RefSeq, KEGG, and UniProt records. Of the 369 identifiers, 368 were confirmed and one remains unresolved. No conflicting, split, merged, or duplicate mappings were found. Unclear cases are left unresolved rather than inferred from gene function or orthology.
 
 Windows PowerShell:
 
