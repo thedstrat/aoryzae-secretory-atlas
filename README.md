@@ -45,7 +45,13 @@ The pathway diagram shows where Liu's genes fit in secretion and how many respon
 
 ### Where the atlas fields come from
 
-The atlas combines three kinds of information: **original Liu 2014 data** such as the old gene ID, description, yeast ortholog, and expression results; **current database information** such as modern gene IDs, protein names, KEGG groups, and updated annotations; and **project-generated labels** that organize those sources into a consistent format. Those generated labels include the gene's **subsystem**, **pathway stage**, **glycosylation role**, **evidence type**, **mapping status**, and a short **rationale** explaining why the label was assigned. These values are produced from documented rules rather than invented. Direct database links are preferred for ID mapping, sequence comparison is used when an authoritative source sequence is available, and unclear cases are flagged for manual review rather than forced into a match.
+The atlas brings together three kinds of information:
+
+- **What Liu reported in 2014:** the original gene ID, description, yeast counterpart, and expression results.
+- **What current databases say:** the gene's current ID, protein name, KEGG group, and updated description.
+- **Labels added by this project:** where the gene fits in the secretion pathway, whether it is involved in glycosylation, how strong the evidence is, how confidently the old ID was matched, and a short explanation of the decision.
+
+These labels are created by comparing the available sources, not by guessing. For old gene IDs, direct links in trusted databases are used first. Sequence matching is only used when a reliable old sequence is available. If the evidence is unclear, the gene is flagged for review instead of being forced into a match.
 
 The original supplementary inputs are retained under [`data/raw/liu2014/`](data/raw/liu2014/); see its README for provenance.
 
@@ -93,9 +99,9 @@ The full dictionary is in [`column_descriptions.csv`](data/processed/column_desc
 
 ## Verification
 
-Tests confirm that all 369 Liu records are preserved and that source-derived and generated fields are processed consistently.
+The notebooks rebuild the atlas from the original Liu 2014 files and check that all 369 genes reach the final output without being lost or duplicated. They also check that Liu’s original values, such as gene descriptions, yeast matches, and expression results, remain unchanged.
 
-The gene-ID crosswalk was also checked independently against freshly retrieved NCBI RefSeq, KEGG, and UniProt records. Of the 369 identifiers, 368 were confirmed and one remains unresolved. No conflicting, split, merged, or duplicate mappings were found. Unclear cases are left unresolved rather than inferred from gene function or orthology.
+The old gene IDs were checked separately against current NCBI, KEGG, and UniProt records. For 368 genes, the same `AO090...` ID still appeared in current databases and referred to the same A. oryzae gene. One ID could not be found in any of the three databases, so it was left unresolved rather than guessed.
 
 Windows PowerShell:
 
