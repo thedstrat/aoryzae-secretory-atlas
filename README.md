@@ -1,6 +1,6 @@
 # A. oryzae Secretory Pathway Atlas
 
-**Description:** The atlas updates and organizes the 369 secretion-machinery genes catalogued by Liu et al. in 2014. It connects the old gene records to current databases, shows each gene’s likely role and location in the secretion pathway, highlights genes that responded consistently during high protein secretion, and clearly marks uncertain information. The results are available as searchable tables and a pathway diagram.
+**Description:** The atlas covers the 369 secretion-machinery genes catalogued by Liu et al. in 2014. It connects the old gene records from Liu et al. to current databases (NCBI RefSeq, KEGG, and UniProt) so they can be found and used with today’s tools. It also organizes the genes by their role and location in the secretion pathway, highlights the genes that responded consistently during high protein secretion, and records uncertainty where evidence is incomplete. The results are provided as searchable tables and a pathway diagram.
 
 **Scope:** This atlas covers Liu et al.’s 369 secretion-machinery genes—not all ~12,000 *A. oryzae* genes.
 
