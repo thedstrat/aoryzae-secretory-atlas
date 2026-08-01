@@ -13,16 +13,16 @@ The 369 secretion machinery genes catalogued by Liu et al. 2014, resolved agains
 | File | Purpose |
 |---|---|
 | [`pathway_overview.svg`](data/processed/pathway_overview.svg) | Primary pathway placement with unassigned genes shown explicitly. |
-| [`FINDINGS.md`](data/processed/FINDINGS.md) | A concise, evidence-bounded interpretation of the current atlas. |
 | [`high_secretion_responsive_genes.csv`](data/processed/high_secretion_responsive_genes.csv) | The 51 machinery genes consistently changed in all three secretion strains. |
 | [`secretion_machinery_genes.csv`](data/processed/secretion_machinery_genes.csv) | Liu's complete 369-row machinery list, one biological gene per row. |
 | [`column_descriptions.csv`](data/processed/column_descriptions.csv) | Definitions, allowed values, and provenance for every atlas column. |
+| [`FINDINGS.md`](data/processed/FINDINGS.md) | A concise, evidence-bounded interpretation of the current atlas. |
 
 ![A. oryzae secretory pathway overview](data/processed/pathway_overview.png)
 
 ## Why this exists
 
-*A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 and is out of scope here.
+*A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
 
 ## Current numbers
 
