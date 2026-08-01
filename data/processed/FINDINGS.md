@@ -1,45 +1,76 @@
-# What the current atlas suggests
+# What this project found
 
-## The response is strongest early in secretion
+## The short version
 
-Of the 51 machinery genes that changed significantly and in the same direction in all three alpha-amylase-overproducing strains, **34 fall in the first five ordered stages** (translocation, dolichol-linked glycan assembly, ER N-glycosylation, folding, and GPI-anchor biosynthesis). **Thirteen fall in late trafficking**, defined here as COPII through SNARE-mediated fusion. The other four are in ER-associated degradation or the beta-1,6-glucan branch.
+This project organizes 369 genes that Liu and colleagues linked to the protein-secretion machinery of *Aspergillus oryzae*. These are genes involved in preparing, folding, modifying, transporting, and releasing proteins from the cell.
 
-The contrast is clearer after accounting for subsystem size: 34/111 genes (31%) respond in the first five stages, compared with 13/108 (12%) in the late block. Early secretion machinery therefore expands more broadly under high secretion. The downstream result is not a total absence—COPII and COPI contain responsive genes—but the terminal HDSV, CPY, ALP, and SNARE stages have none.
+Of those 369 genes, 51 changed consistently in three strains engineered to produce large amounts of alpha-amylase, a secreted enzyme. Forty-eight became more active and three became less active.
 
-## Candidates for follow-up
+These 51 genes are useful candidates for further study. They are not proven causes of better secretion, and they are not ranked from best to worst.
 
-The 48 consistently up-regulated genes are reasonable **overexpression candidates**, not proven causes of improved secretion. The experiment shows association with high secretion; each candidate still needs a controlled perturbation and product-specific validation.
+## Most of the response happens early
 
-Two especially interpretable candidates are **KAR2/BiP** (`AO090003000257`), the principal ER folding chaperone, and **PDI1/pdiA** (`AO090001000733`), a protein disulfide isomerase. Filamentous-fungus experiments provide precedent but also show that dosage and cargo matter: bipA overexpression increased heterologous thaumatin secretion 2–2.5-fold in *Aspergillus awamori* ([Lombraña et al., 2004](https://pmc.ncbi.nlm.nih.gov/articles/PMC520887/)), while an intermediate PDI level produced the best thaumatin yield and excess PDI was not beneficial ([Moralejo et al., 2001](https://pubmed.ncbi.nlm.nih.gov/11683266/)).
+A newly made protein passes through several steps before it leaves the cell. First it enters the ER, where it is folded and chemically modified. It is then packaged into vesicles, moved through the Golgi apparatus, and sent toward its final destination.
 
-## The three decreases
+The strongest response in the high-producing strains occurred during the early ER steps:
 
-- `AO090120000486` — **CPR1/CPR3**, a cyclophilin-type peptidyl-prolyl isomerase in protein folding.
-- `AO090038000451` — **OLA1**, a P-loop ATPase assigned to ER-associated degradation.
-- `AO090005001643` — **RUD3**, a Golgi matrix protein involved in ER–Golgi transport.
+- 34 of the 111 genes assigned to the first five stages responded, or about 31%.
+- 13 of the 108 genes assigned to later transport stages responded, or about 12%.
 
-These are sharper hypotheses than the larger up-regulated set, but a decrease still does not establish that repressing the gene would improve secretion.
+This suggests that cells producing large amounts of alpha-amylase place especially heavy demands on the machinery that receives, folds, and modifies new proteins. Later transport steps also respond, but less broadly.
 
-## Complex-level coherence
+## What the 51-gene list means
 
-Every atlas-listed subunit of two complexes responded: the translocon records (**SEC61/SSH1** and **SBH1/SBH2**, 2/2) and the signal peptidase complex (**SEC11, SPC2, SPC3**, 3/3) were all up-regulated. This coordinated response across complex members is internal evidence that the early-pathway signal is biologically coherent rather than isolated noise.
+A gene was included in the 51-gene list only if its activity changed significantly in all three high-producing strains and moved in the same direction each time.
 
-The oligosaccharyltransferase complex is a useful counterexample, not an all-subunit hit: **OST1/OST2, OST3/OST6, STT3, and SWP1** responded, while **OST5** and **WBP1** did not meet the all-three-strain criterion (4/6 atlas-listed records).
+This is a strict consistency rule. It helps remove genes that changed in only one strain or behaved unpredictably. It does not show that a gene caused the strains to secrete more protein.
 
-## Where the response is absent
+The 48 genes that became more active may be useful overexpression candidates. Researchers could test whether increasing their activity improves production. Such experiments are still necessary because a helpful response by the cell is not always a useful engineering target.
 
-No responsive genes occur in high-density secretory vesicles, the CPY or ALP vacuolar routes, SNARE vesicle fusion, septin organization, translation, either mitochondrial category, or the 122 unassigned records. These zeroes describe this transcriptomic response; they do not prove that those processes are unimportant to secretion.
+Two understandable examples are:
 
-## Limitations
+- **KAR2/BiP** (`AO090003000257`), an ER protein-folding chaperone.
+- **PDI1/pdiA** (`AO090001000733`), a protein disulfide isomerase involved in protein folding.
 
-This analysis does **not** identify what limits secretion. It prioritizes machinery correlated with the Liu high-secretion state.
+Related experiments in other *Aspergillus* species show why testing matters. Increasing BiP improved secretion of one protein in *Aspergillus awamori*, while increasing PDI helped only up to a point; too much was not beneficial. The outcome can depend on the amount of gene activity and the protein being produced.
 
-The 369-gene Liu list is not a genome-wide glycosylation-knockout catalogue. Contrary to a simple “OCH1 is absent” summary, it contains one `HOC1/OCH1`-linked record and several MNN-family orthologs (`MNN4`, `MNN9`, `MNN10`, and `MNN11`), but it does not establish complete coverage of the *A. oryzae* OCH/MNN families. Finding knockout targets therefore requires a separate genome-wide family search.
+## The three genes that became less active
 
-Finally, **122 genes lack a primary subsystem** and **189 have compartment `unknown`**. The diagram keeps those gaps visible instead of assigning unsupported positions.
+Three genes consistently decreased in activity:
 
-## Protease knockout targets
+- `AO090120000486` — **CPR1/CPR3**, which helps with protein folding.
+- `AO090038000451` — **OLA1**, an ATPase assigned to ER-associated degradation.
+- `AO090005001643` — **RUD3**, which helps move material between the ER and Golgi.
 
-`alpA`, `npI`, and `npII` do not appear in `glycosylation_genes.csv` or `secretion_machinery_genes.csv`, either as *A. oryzae* genes or as named yeast ortholog equivalents.
+These decreases are interesting clues, but they do not prove that deleting or suppressing these genes would improve secretion.
 
-The current atlas covers secretion machinery: 369 genes from Liu 2014. A protease knockout list requires a separate genome-wide search for extracellular protease families in *A. oryzae*, which is a natural next step using the same pipeline infrastructure.
+## Groups of genes responded together
+
+Several proteins work as parts of larger complexes. Seeing multiple members of the same complex respond together makes the overall result more convincing.
+
+All genes listed for two early complexes became more active:
+
+- The **translocon**: 2 of 2 listed genes responded.
+- The **signal peptidase complex**: 3 of 3 listed genes responded.
+
+Four of the six listed genes in the oligosaccharyltransferase complex responded. This is still a coordinated response, but not every member changed.
+
+## Parts of the pathway with no response
+
+Some pathway sections had no genes that passed the strict three-strain rule. These included several routes to the vacuole, the final membrane-fusion machinery, translation, and the mitochondrial categories in the atlas.
+
+This does not mean those processes are unimportant. It means only that none of their listed genes changed consistently enough in this particular experiment to meet the project’s rule.
+
+## Important limits
+
+This project does not identify the single step that limits protein secretion. It identifies genes associated with the high-secretion state in Liu’s alpha-amylase experiment.
+
+The 369 genes are a selected secretion-machinery list from Liu 2014, not every gene in the *A. oryzae* genome. The atlas therefore cannot be used as a complete list of all possible secretion, glycosylation, or gene-knockout targets.
+
+Some entries are also more certain than others:
+
+- 122 genes do not yet have a reliable primary pathway assignment.
+- 189 genes do not yet have a confident cellular location.
+- Many functions are inferred from similar genes in yeast or other *Aspergillus* species rather than demonstrated directly in *A. oryzae*.
+
+The table leaves these gaps visible instead of filling them with guesses. The safest use of this project is to choose reasonable genes for follow-up experiments, while checking the evidence and uncertainty recorded for each gene.
