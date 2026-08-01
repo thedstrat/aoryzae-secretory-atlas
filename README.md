@@ -1,14 +1,13 @@
 # A. oryzae Secretory Pathway Atlas
 
-**Description.** The atlas covers the 369 secretion-machinery genes catalogued by Liu et al. in 2014. It updates the old gene records for use with current databases, organizes the genes by their role and location in the secretion pathway, highlights the genes that responded consistently during high protein secretion, and records uncertainty where the evidence is incomplete. The results are provided as searchable tables and a pathway diagram.
+**Description:** The atlas updates and organizes the 369 secretion-machinery genes catalogued by Liu et al. in 2014. It connects the old gene records to current databases, shows each gene’s likely role and location in the secretion pathway, highlights genes that responded consistently during high protein secretion, and clearly marks uncertain information. The results are available as searchable tables and a pathway diagram.
 
-**Scope.** This atlas covers Liu et al.'s 369 secretion machinery genes—not all ~12,000 *A. oryzae* genes.
+**Scope:** This atlas covers Liu et al.’s 369 secretion-machinery genes—not all ~12,000 *A. oryzae* genes.
 
 - It does not add genes identified or reannotated since 2014.
-- Secreted proteins (cargo), proteases, and glycosyltransferases outside Liu's list are absent; `alpA`, `npI`, and `npII` are examples.
-- The contribution is making an existing dataset usable and legible, not discovering new genes.
-
-**Purpose.** *A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
+- Secreted proteins, proteases, and glycosyltransferases outside Liu’s list are absent; `alpA`, `npI`, and `npII` are examples.
+- Liu’s predicted secretome in supplementary Table S3 is also out of scope.
+- The contribution is making an existing dataset usable and understandable, not discovering new genes.
 
 ## Start here
 
