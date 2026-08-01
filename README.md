@@ -1,12 +1,14 @@
 # A. oryzae Secretory Pathway Atlas
 
-The 369 secretion machinery genes catalogued by Liu et al. 2014, resolved against current databases and rendered as a pathway diagram.
+**Description.** The atlas covers the 369 secretion-machinery genes catalogued by Liu et al. in 2014. It updates the old gene records for use with current databases, organizes the genes by their role and location in the secretion pathway, highlights the genes that responded consistently during high protein secretion, and records uncertainty where the evidence is incomplete. The results are provided as searchable tables and a pathway diagram.
 
-**Scope:** This covers Liu et al.'s 369 genes, not all ~12,000 *A. oryzae* genes.
+**Scope.** This atlas covers Liu et al.'s 369 secretion machinery genes—not all ~12,000 *A. oryzae* genes.
 
 - It does not add genes identified or reannotated since 2014.
 - Secreted proteins (cargo), proteases, and glycosyltransferases outside Liu's list are absent; `alpA`, `npI`, and `npII` are examples.
 - The contribution is making an existing dataset usable and legible, not discovering new genes.
+
+**Purpose.** *A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
 
 ## Start here
 
@@ -20,10 +22,6 @@ The 369 secretion machinery genes catalogued by Liu et al. 2014, resolved agains
 The pathway diagram shows where Liu's genes fit in secretion and how many responded; [open the SVG](data/processed/pathway_overview.svg) for the full-size version.
 
 ![A. oryzae secretory pathway overview](data/processed/pathway_overview.png)
-
-## Purpose
-
-*A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
 
 ## How it works
 
