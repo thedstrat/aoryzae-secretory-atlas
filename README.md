@@ -25,16 +25,6 @@ The pathway diagram shows where Liu's genes fit in secretion and how many respon
 
 *A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
 
-## Current numbers
-
-| Measure | Count | What it means |
-|---|---:|---|
-| Machinery genes | 369 | The full set catalogued by Liu in 2014. |
-| Consistently responsive genes | 51 | Expression changed in all three high-secretion strains: 48 increased and 3 decreased. |
-| Genes assigned to a subsystem | 247 | A subsystem is a stage or branch of the secretion pathway. The other 122 lack enough evidence for placement in the pathway itself and remain grouped as unassigned. |
-| Genes with a known compartment | 180 | The other 189 do not yet have a confident cellular location. |
-| Genes with a KEGG Orthology group | 330 | A KEGG Orthology group connects genes with equivalent functions across species and makes them easier to compare in current databases. |
-
 ## How it works
 
 | Step | What happens | Main output |
@@ -54,6 +44,16 @@ The atlas brings together three kinds of information:
 These labels are created by comparing the available sources, not by guessing. For old gene IDs, direct links in trusted databases are used first. Sequence matching is only used when a reliable old sequence is available. If the evidence is unclear, the gene is flagged for review instead of being forced into a match.
 
 The original supplementary inputs are retained under [`data/raw/liu2014/`](data/raw/liu2014/); see its README for provenance.
+
+## Current numbers
+
+| Measure | Count | What it means |
+|---|---:|---|
+| Machinery genes | 369 | The full set catalogued by Liu in 2014. |
+| Consistently responsive genes | 51 | Expression changed in all three high-secretion strains: 48 increased and 3 decreased. |
+| Genes assigned to a subsystem | 247 | A subsystem is a stage or branch of the secretion pathway. The other 122 lack enough evidence for placement in the pathway itself and remain grouped as unassigned. |
+| Genes with a known compartment | 180 | The other 189 do not yet have a confident cellular location. |
+| Genes with a KEGG Orthology group | 330 | A KEGG Orthology group connects genes with equivalent functions across species and makes them easier to compare in current databases. |
 
 ## Project status
 
