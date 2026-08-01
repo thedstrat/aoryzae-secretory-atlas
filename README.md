@@ -12,11 +12,12 @@ The 369 secretion machinery genes catalogued by Liu et al. 2014, resolved agains
 
 | File | Purpose |
 |---|---|
-| [`pathway_overview.svg`](data/processed/pathway_overview.svg) | Primary pathway placement with unassigned genes shown explicitly. |
 | [`high_secretion_responsive_genes.csv`](data/processed/high_secretion_responsive_genes.csv) | The 51 machinery genes consistently changed in all three secretion strains. |
 | [`secretion_machinery_genes.csv`](data/processed/secretion_machinery_genes.csv) | Liu's complete 369-row machinery list, one biological gene per row. |
 | [`column_descriptions.csv`](data/processed/column_descriptions.csv) | Definitions, allowed values, and provenance for every atlas column. |
 | [`FINDINGS.md`](data/processed/FINDINGS.md) | A concise, evidence-bounded interpretation of the current atlas. |
+
+The pathway diagram shows where Liu's genes fit in secretion and how many responded; [open the SVG](data/processed/pathway_overview.svg) for the full-size version.
 
 ![A. oryzae secretory pathway overview](data/processed/pathway_overview.png)
 
