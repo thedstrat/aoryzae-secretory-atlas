@@ -21,7 +21,7 @@ The pathway diagram shows where Liu's genes fit in secretion and how many respon
 
 ![A. oryzae secretory pathway overview](data/processed/pathway_overview.png)
 
-## Why this exists
+## Purpose
 
 *A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 but is out of scope here.
 
