@@ -6,4 +6,4 @@ This release places **247/369** genes. Assignments preserve their source in this
 
 KEGG retrieval now validates the organism through `GET https://rest.kegg.jp/list/aor`. **330/369** machinery genes have a supplied KO; unavailable values remain blank. KO family mappings add conservative glycosylation roles without replacing Liu-derived roles.
 
-KAR2/BiP is placed primarily in folding, with ERAD retained as a secondary relationship. Seven other genes with explicit cross-subsystem Liu descriptions retain their defensible primary assignment and now expose the additional role in `gene_pathway_roles.csv`. The pathway figure shows all 122 unassigned genes.
+Four reviewed secondary roles are retained directly in `secretion_machinery_genes.csv`. The pathway figure is built from that table and shows all 122 unassigned genes.

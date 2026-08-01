@@ -53,13 +53,13 @@ def test_required_fields_are_real_columns():
 def test_enums_serialise_to_strings():
     r = GeneRecord(
         record_id="AOR00001",
-        record_type=RecordType.CLIENT,
+        record_type=RecordType.MACHINERY,
         record_origin=RecordOrigin.NEW_ORTHOLOGY,
         mapping_status=MappingStatus.AMBIGUOUS,
         glycosylation_role=GlycosylationRole.GOLGI_MANNOSYLATION,
     )
     row = r.to_row()
-    assert row["record_type"] == "secretory_client"
+    assert row["record_type"] == "machinery_component"
     assert row["record_origin"] == "new_orthology_inference"
     assert row["mapping_status"] == "ambiguous"
     assert row["glycosylation_role"] == "golgi_mannosylation"
@@ -71,6 +71,3 @@ def test_subsystem_order_is_monotonic_and_unique():
     assert len(values) == len(set(values)), "duplicate pathway_order values"
     assert values == sorted(values), "SUBSYSTEM_ORDER should read in pathway order"
 
-
-def test_machinery_and_clients_are_distinct_values():
-    assert RecordType.MACHINERY.value != RecordType.CLIENT.value

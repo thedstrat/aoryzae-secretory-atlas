@@ -1,6 +1,10 @@
 # Raw API responses - do NOT commit.
 # KEGG licensing restricts redistribution of bulk data.
 data/raw/
+!data/raw/
+data/raw/*
+!data/raw/liu2014/
+!data/raw/liu2014/**
 data/interim/
 
 # Generated outputs (commit deliberately, when versioned)

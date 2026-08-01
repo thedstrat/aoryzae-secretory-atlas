@@ -1,4 +1,4 @@
-"""Acceptance tests: no silent data loss, machinery never blended with clients.
+"""Acceptance tests: no silent data loss from the machinery atlas.
 
 These encode the invariants agreed before any code was written. They exist
 because bad joins do not raise - they just return fewer rows, and you get a
@@ -10,7 +10,7 @@ import pytest
 from pathlib import Path
 
 from atlas.crosswalk import assert_no_row_loss, make_record_ids, resolve_by_locus_tag
-from atlas.schema import REQUIRED_FIELDS, RecordType
+from atlas.schema import REQUIRED_FIELDS
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +24,22 @@ def source_and_final():
                          how="left", validate="one_to_one", suffixes=("_final", "_liu"))
     assert len(joined) == 369
     return source, final, joined
+
+
+def test_liu_evidence_sources_are_normalized(source_and_final):
+    _, final, _ = source_and_final
+    source = final.liu_source_raw.fillna("")
+
+    assert not final.evidence_source.eq("unknown").any()
+    assert final.loc[source.str.contains("bhits", case=False), "evidence_source"].isin(
+        ["yeast_inference", "aspergillus_homolog", "a_oryzae_transcriptomic", "a_oryzae_experimental"]
+    ).all()
+    assert final.loc[source.str.contains("wang et al 2010-AO", case=False), "evidence_source"].isin(
+        ["a_oryzae_transcriptomic", "a_oryzae_experimental"]
+    ).all()
+    assert final.loc[source.str.contains("Kuratsu et al 2007-AO SNARE", case=False), "evidence_source"].eq(
+        "a_oryzae_experimental"
+    ).all()
 
 
 def test_every_source_row_gets_a_record_id():
@@ -42,16 +58,6 @@ def test_row_with_no_identifier_is_kept():
     })
     out = resolve_by_locus_tag(seed, cw)
     assert len(out) == 2
-
-
-def test_machinery_and_clients_never_share_a_frame_by_accident():
-    machinery = pd.DataFrame({"record_id": ["A1"], "record_type": [RecordType.MACHINERY.value]})
-    clients = pd.DataFrame({"record_id": ["C1"], "record_type": [RecordType.CLIENT.value]})
-    combined = pd.concat([machinery, clients], ignore_index=True)
-
-    # A combined export is fine ONLY if record_type distinguishes them.
-    assert combined["record_type"].nunique() == 2
-    assert combined["record_type"].notna().all(), "unlabelled blend is the failure mode"
 
 
 def test_required_fields_present_in_shippable_table():
@@ -101,11 +107,6 @@ def test_row_level_liu_provenance_is_complete(source_and_final):
     assert final.liu_source_raw.fillna("").tolist() == expected_raw.tolist()
     assert final.liu_table_row.tolist() == [f"S1:{row}" for row in range(3, 372)]
 
-    clients = pd.read_csv(PROJECT_ROOT / "data/processed/secreted_proteins_predicted.csv")
-    assert clients.liu_source_raw.isna().all()
-    assert clients.liu_table_row.tolist() == [f"S3:{row}" for row in range(3, 2272)]
-
-
 def test_liu_subsystems_are_normalized_from_the_source_cell(source_and_final):
     _, _, joined = source_and_final
     normalized = {
@@ -152,23 +153,27 @@ def test_shortlist_per_gene_and_aggregate_contract(source_and_final):
     assert shortlist.direction.value_counts().to_dict() == {"up": 48, "down": 3}
 
 
+def test_review_queue_contains_both_consolidated_row_types():
+    processed = PROJECT_ROOT / "data/processed"
+    review = pd.read_csv(processed / "qa/genes_needing_review.csv")
+    assert review.review_row_type.value_counts().to_dict() == {
+        "review_needed": 8,
+        "rejected_candidate": 6,
+    }
+
+
 def test_composite_liu_descriptions_keep_primary_rationale_and_secondary_roles(source_and_final):
     _, final, _ = source_and_final
-    relationships = pd.read_csv(PROJECT_ROOT / "data/processed/gene_pathway_roles.csv")
     expected_secondary = {
-        "AO090012000213": {"erad"}, "AO090005000437": {"snare"},
-        "AO090023000840": {"folding"}, "AO090003000257": {"erad"},
-        "AO090003000853": {"erad"},
-        "AO090005000718": {"hdsv", "ldsv", "cpy_pathway", "alp_pathway"},
-        "AO090701000139": {"snare"}, "AO090023000864": {"snare"},
+        "AO090701000141": "folding",
+        "AO090003001225": "folding",
+        "AO090020000468": "folding",
+        "AO090009000178": "er_glycosylation",
     }
     for tag, secondary in expected_secondary.items():
         row = final.loc[final.liu_ao_locus_tag.eq(tag)].iloc[0]
         assert pd.notna(row.subsystem) and bool(row.subsystem_rationale)
-        observed = set(relationships.loc[
-            relationships.ao_locus_tag.eq(tag) & relationships.relationship_type.eq("secondary"),
-            "subsystem",
-        ])
-        assert secondary.issubset(observed)
-    kar2 = final.loc[final.liu_ao_locus_tag.eq("AO090003000257")].iloc[0]
-    assert kar2.subsystem == "folding", "KAR2 must not inherit the first ERAD token"
+        assert row.secondary_subsystem == secondary
+        assert bool(row.secondary_subsystem_rationale)
+    assert final.secondary_subsystem.notna().sum() == 4
+    assert final.record_id.is_unique

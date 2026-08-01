@@ -51,8 +51,9 @@ sources:
 
   liu2014:
     doi: "10.1186/1752-0509-8-73"
+    workbook_path: "data/raw/liu2014/12918_2013_1339_MOESM2_ESM.xls"
+    feizi_scaffold_path: "data/raw/liu2014/feizi2013_table_s1.xlsx"
     components_path: "data/interim/liu_components_raw_cleaned.csv"
-    clients_path: "data/interim/liu_clients_raw_cleaned.csv"
 
 # KO numbers for glycosylation families. Look up once at
 # https://www.genome.jp/kegg/ko.html and fill in. Use KO, NOT gene symbols -

@@ -1,14 +1,9 @@
 {
   "machinery_rows": 369,
-  "client_rows": 2269,
   "machinery_mapping_status": {
     "exact": 367,
     "unresolved": 1,
     "ambiguous": 1
-  },
-  "client_mapping_status": {
-    "exact": 2268,
-    "unresolved": 1
   },
   "machinery_with_uniprot": 366,
   "machinery_with_ncbi": 284,
@@ -30,7 +25,7 @@
   "subsystem_conflict_rows": 5,
   "machinery_with_glycosylation_role": 62,
   "transcriptomic_shortlist_rows": 51,
-  "flagged_rows": 3,
+  "review_queue_rows": 14,
   "important_limitations": [
     "KEGG organism validation now uses the valid HTTPS /list/aor request; KO values remain blank when KEGG supplies no link",
     "Broad KEGG pathway membership is a coarse subsystem proxy and should be reviewed before biological interpretation",

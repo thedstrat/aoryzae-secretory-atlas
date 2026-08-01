@@ -16,14 +16,13 @@ A traceable, current map of the machinery *Aspergillus oryzae* uses to fold, gly
 
 ## Why this exists
 
-*A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that source evidence, resolves the genes against current databases, separates machinery from predicted cargo, and makes uncertainty visible rather than guessing.
+*A. oryzae* is an important industrial protein producer, but its standard secretory-machinery reference was published in 2014. This project preserves that machinery evidence, resolves the genes against current databases, and makes uncertainty visible rather than guessing. Liu's predicted secretome remains available in supplementary Table S3 and is out of scope here.
 
 ## Current numbers
 
 | Measure | Current build |
 |---|---:|
 | Machinery genes | 369 |
-| Predicted secretory clients | 2,269 |
 | Transcriptomic shortlist | 51 (48 up, 3 down; matches the published result) |
 | Primary subsystem coverage | 247/369 (122 unassigned) |
 | KEGG KO coverage | 330/369 |
@@ -32,9 +31,11 @@ A traceable, current map of the machinery *Aspergillus oryzae* uses to fold, gly
 
 | Step | Plain English | Main output |
 |---|---|---|
-| **1. Profile** | Read Liu's workbook, separate machinery from cargo, preserve source cells, and verify the expression criteria. | Clean source tables and parsing audit |
+| **1. Profile** | Read Liu's Table S1 machinery list, preserve its source cells, and verify the expression criteria. | Clean machinery source table and parsing audit |
 | **2. Update IDs** | Resolve Liu-era locus tags against current KEGG, UniProt, and NCBI identifiers. | Identifier crosswalk and KO links |
 | **3. Build** | Assign documented pathway positions, compartments, glycosylation roles, and evidence provenance. | Final atlas, shortlist, and visualization |
+
+The original supplementary inputs are retained under [`data/raw/liu2014/`](data/raw/liu2014/); see its README for provenance.
 
 ## Project status
 
@@ -44,7 +45,6 @@ Remaining gaps:
 
 - 189 machinery genes still have compartment `unknown`.
 - 122 machinery genes remain without a primary subsystem.
-- Liu's workbook yields 116 significant clients while the paper reports 111; the discrepancy is recorded, not overridden.
 
 ## Outputs
 
@@ -52,13 +52,10 @@ Remaining gaps:
 
 | File | Grain | Contents |
 |---|---|---|
-| `secretion_machinery_genes.csv` | One row per machinery gene | The complete 369-gene atlas with identifiers, annotations, expression flags, and provenance. |
-| `secreted_proteins_predicted.csv` | One row per predicted client gene | The 2,269 predicted cargo proteins, kept separate from machinery. |
+| `secretion_machinery_genes.csv` | One row per machinery gene | The complete 369-gene atlas with identifiers, primary and reviewed secondary subsystem roles, annotations, expression flags, and provenance. |
 | `high_secretion_responsive_genes.csv` | One row per responsive machinery gene | The 51 genes significant in all three Liu comparisons. |
 | `glycosylation_genes.csv` | One row per machinery gene with an assigned glycosylation role | Conservative assembly, transfer, trimming, Golgi, O-glycosylation, and GPI annotations. |
-| `gene_pathway_roles.csv` | One row per gene–subsystem relationship | Primary placements plus documented secondary roles and cross-links. |
 | `gene_id_mapping.csv` | One row per gene–identifier mapping | Current locus, UniProt, KEGG, and NCBI identifier links, including alternate candidates. |
-| `pathway_diagram_data.csv` | One row per machinery gene | Primary visualization placement and secondary-subsystem labels. |
 | `pathway_overview.svg` | One diagram per build | Standalone vector overview with definitions, counts, citation, confidence note, and build date. |
 | `pathway_overview.png` | One diagram per build | GitHub-friendly raster rendering of the same overview. |
 | `column_descriptions.csv` | One row per output field | Data dictionary generated from `atlas/schema.py`, including vocabulary and provenance. |
@@ -70,13 +67,10 @@ Remaining gaps:
 |---|---|---|
 | `build_audit.json` | One record per build | Machine-readable counts, coverage, and important limitations. |
 | `coverage_summary.md` | One summary per build | Human-readable release coverage, evidence order, and remaining gaps. |
-| `genes_needing_review.csv` | One row per reviewed source record | All unresolved identifiers and conflicting annotations requiring review. |
-| `subsystem_assignment_audit.csv` | One row per machinery gene | Primary evidence plus rejected subsystem candidates not retained in the component table. |
+| `genes_needing_review.csv` | One row per review or rejected-candidate record | Review-needed genes and rejected subsystem candidates, distinguished by `review_row_type`. |
 | `liu_vs_atlas_sample.csv` | One row per sampled machinery gene | Twenty original Liu rows beside their derived atlas fields for inspection. |
 
-`unresolved_identifiers.csv` was consolidated into `genes_needing_review.csv`: its three records were a strict subset of the nine-row review queue.
-
-`subsystem_assignment_audit.csv` is retained because six rows record rejected or conflicting subsystem candidates and evidence summaries that are not present in the component table.
+`genes_needing_review.csv` contains both review-needed rows and rejected subsystem candidates, distinguished by `review_row_type`.
 
 ## What a row looks like
 
@@ -107,15 +101,17 @@ Liu-derived, fetched, and pipeline-generated fields remain distinguishable per r
 | record_id | Unique row ID generated by this project. | free text (AOR/AOC plus five digits) | generated |
 | ao_locus_tag | Current A. oryzae RIB40 locus tag. | free text (AO090 plus nine digits) or blank | fetched |
 | liu_ao_locus_tag | Locus tag exactly as printed by Liu et al. 2014. | free text | Liu 2014 |
-| liu_source_raw | The four Liu SOURCE cells in order, joined with pipes without changing cell text; blank for Table S3, which has no SOURCE columns. | free text or blank | Liu 2014 |
-| liu_table_row | Supplementary table and physical workbook row. | free text (S1:n or S3:n) | Liu 2014 |
+| liu_source_raw | The four Liu Table S1 SOURCE cells in order, joined with pipes without changing cell text. | free text | Liu 2014 |
+| liu_table_row | Table S1 physical workbook row. | free text (S1:n) | Liu 2014 |
 | gene_name | Current accepted A. oryzae gene symbol where available. | free text or blank | fetched |
 | function | Plain-English function selected from the Liu description or current annotation. | free text or blank | generated |
-| record_type | Separates secretory machinery from predicted cargo. | machinery_component &#124; secretory_client | generated |
+| record_type | Identifies rows as secretion-machinery components. | machinery_component | generated |
 | subsystem | Primary pathway subsystem used for diagram placement. | tc &#124; dolichol_pathway &#124; er_glycosylation &#124; folding &#124; gpi_biosynthesis &#124; erad &#124; copii &#124; copi &#124; golgi_processing &#124; ldsv &#124; hdsv &#124; cpy_pathway &#124; alp_pathway &#124; snare &#124; septin &#124; beta_1_6_glucan_biosynthesis &#124; translation &#124; putative_mitochondria_protein &#124; mitochondrial_m_aaa_protease &#124; blank | generated |
 | subsystem_source | Evidence route used for the primary subsystem. | liu2014 &#124; liu2014_description &#124; yeast_scaffold &#124; current_annotation &#124; kegg_pathway &#124; curated_liu_composite &#124; liu2014_description+uniprot+kegg_ko &#124; aspergillus_homolog+uniprot+yeast_ortholog+kegg_ko &#124; unassigned | generated |
 | subsystem_confidence | Confidence in the primary subsystem assignment. | high &#124; medium &#124; low | generated |
 | subsystem_rationale | Short explanation for the primary subsystem assignment. | free text | generated |
+| secondary_subsystem | Reviewed secondary pathway role retained without duplicating the gene row. | subsystem value or blank | generated |
+| secondary_subsystem_rationale | Short explanation for the secondary pathway role. | free text or blank | generated |
 | pathway_order | Numeric diagram position derived from the primary subsystem. | numeric or blank | generated |
 | compartment | Controlled primary cellular compartment. | cytosol &#124; ER &#124; Golgi &#124; vesicle &#124; membrane &#124; vacuole &#124; extracellular &#124; unknown | generated |
 | compartment_source | Evidence route used for compartment assignment. | uniprot &#124; uniprot_conflict &#124; subsystem_inference &#124; unassigned | generated |

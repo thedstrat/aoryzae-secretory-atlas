@@ -37,3 +37,9 @@ This analysis does **not** identify what limits secretion. It prioritizes machin
 The 369-gene Liu list is not a genome-wide glycosylation-knockout catalogue. Contrary to a simple “OCH1 is absent” summary, it contains one `HOC1/OCH1`-linked record and several MNN-family orthologs (`MNN4`, `MNN9`, `MNN10`, and `MNN11`), but it does not establish complete coverage of the *A. oryzae* OCH/MNN families. Finding knockout targets therefore requires a separate genome-wide family search.
 
 Finally, **122 genes lack a primary subsystem** and **189 have compartment `unknown`**. The diagram keeps those gaps visible instead of assigning unsupported positions.
+
+## Protease knockout targets
+
+`alpA`, `npI`, and `npII` do not appear in `glycosylation_genes.csv` or `secretion_machinery_genes.csv`, either as *A. oryzae* genes or as named yeast ortholog equivalents.
+
+The current atlas covers secretion machinery: 369 genes from Liu 2014. A protease knockout list requires a separate genome-wide search for extracellular protease families in *A. oryzae*, which is a natural next step using the same pipeline infrastructure.
