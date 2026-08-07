@@ -42,6 +42,15 @@ These labels are created by comparing the available sources, not by guessing. Fo
 
 The original supplementary inputs are retained under [`data/raw/liu2014/`](data/raw/liu2014/); see its README for provenance.
 
+## Results
+
+| File | What it contains |
+|---|---|
+| [`secretion_machinery_genes.csv`](data/processed/secretion_machinery_genes.csv) | The complete 369-gene atlas, including current database IDs, pathway placement, location, glycosylation roles, expression results, evidence, and uncertainty. |
+| [`high_secretion_responsive_genes.csv`](data/processed/high_secretion_responsive_genes.csv) | The 51 genes whose expression changed significantly and in the same direction in all three high-secretion strains. |
+| [`glycosylation_genes.csv`](data/processed/glycosylation_genes.csv) | A focused view of 62 machinery genes with an assigned glycosylation role: 24 high-confidence and 38 medium-confidence assignments. It is not a complete or fully experimentally validated list of all *A. oryzae* glycosylation genes. |
+| [`column_descriptions.csv`](data/processed/column_descriptions.csv) | A guide to every column, including allowed values, plain-English value meanings, legitimate blank cells, and where the information came from. |
+
 ## Current numbers
 
 | Measure | Count | What it means |
@@ -55,44 +64,6 @@ The original supplementary inputs are retained under [`data/raw/liu2014/`](data/
 ## Project status
 
 All three notebooks run successfully. KEGG access works, 330 of the 369 genes have a KEGG Orthology (KO) identifier, and both SVG and PNG visualizations are rendered.
-
-## Outputs
-
-<details>
-<summary>Full processed file inventory</summary>
-
-| File | Grain | Contents |
-|---|---|---|
-| `secretion_machinery_genes.csv` | One row per machinery gene | Liu's 369-gene list with identifiers, primary and reviewed secondary subsystem roles, annotations, expression flags, and provenance. |
-| `high_secretion_responsive_genes.csv` | One row per responsive machinery gene | The 51 genes significant in all three Liu comparisons. |
-| `glycosylation_genes.csv` | One row per machinery gene with an assigned glycosylation role | Conservative assembly, transfer, trimming, Golgi, O-glycosylation, and GPI annotations. |
-| `gene_id_mapping.csv` | One row per gene–identifier mapping | Current locus, UniProt, KEGG, and NCBI identifier links, including alternate candidates. |
-| `column_descriptions.csv` | One row per output field | Data dictionary generated from `atlas/schema.py`, including value meanings, blank-cell explanations, and provenance. |
-
-| File | Contents |
-|---|---|
-| `pathway_overview.svg` | Standalone vector overview with definitions, counts, citation, confidence note, and build date. |
-| `pathway_overview.png` | GitHub-friendly raster rendering of the same overview. |
-| `FINDINGS.md` | Human-readable response pattern, candidates, complex checks, absent responses, and limitations. |
-
-`data/processed/qa/` holds the build audit, a coverage summary, the review queue, and a 20-gene sample comparing Liu's original cells to the derived atlas fields.
-
-</details>
-
-## Data dictionary
-
-The full dictionary is in [`column_descriptions.csv`](data/processed/column_descriptions.csv); it explains controlled values and blanks, while its `source` column marks each field as Liu-derived, fetched, or generated. The less obvious fields are summarized here:
-
-<!-- DATA_DICTIONARY_START -->
-| Field | Definition | Allowed values |
-|---|---|---|
-| evidence_source | Broad type of evidence Liu used to include or support the gene; this is not the subsystem confidence score. | a_oryzae_experimental &#124; a_oryzae_transcriptomic &#124; aspergillus_homolog &#124; yeast_inference &#124; database_prediction &#124; unknown |
-| subsystem_source | Main evidence route used to assign subsystem; see subsystem_rationale for the gene-specific explanation. | liu2014 &#124; liu2014_description &#124; yeast_scaffold &#124; current_annotation &#124; kegg_pathway &#124; curated_liu_composite &#124; aspergillus_homolog &#124; unassigned |
-| mapping_status | Result of checking the 2014 gene ID against current database records. | exact &#124; cross_reference &#124; sequence &#124; orthology &#124; ambiguous &#124; split &#124; merged &#124; unresolved |
-| sig_all_three | Whether all three Liu adjusted p-values are below 0.05. | true &#124; false |
-| glycosylation_role | Specific sugar-modification process assigned to the gene. | n_glycan_assembly &#124; n_glycan_transfer &#124; n_glycan_trimming &#124; golgi_mannosylation &#124; o_glycosylation &#124; gpi_anchor &#124; none |
-| manual_review_required | Whether any automated mapping or annotation decision needs a person to inspect it. | true &#124; false |
-<!-- DATA_DICTIONARY_END -->
 
 ## Verification
 
