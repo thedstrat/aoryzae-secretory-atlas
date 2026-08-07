@@ -99,7 +99,10 @@ def uniprot_proteome(
     """
     query = f"proteome:{proteome}" if proteome else f"taxonomy_id:{taxon_id}"
     if not proteome:
-        log.warning("No proteome pinned; querying by taxonomy (noisier).")
+        log.warning(
+            "No specific UniProt proteome is configured; retrieving all records "
+            "for the A. oryzae species instead."
+        )
 
     # The /search endpoint is paginated and a single request silently returns
     # only the first page. The TSV /stream endpoint returns the complete query,

@@ -240,8 +240,8 @@ def build_crosswalk(
     n_before = len(kegg_genes)
     if len(cw) != n_before:
         log.warning(
-            "Crosswalk fan-out: %d -> %d rows. A gene maps to multiple "
-            "accessions; this is expected but must be handled explicitly.",
+            "Some genes have more than one database record: %d gene rows became "
+            "%d gene-to-record links. All alternatives are kept for review.",
             n_before, len(cw),
         )
 

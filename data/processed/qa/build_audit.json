@@ -26,10 +26,10 @@
   "transcriptomic_shortlist_rows": 51,
   "review_queue_rows": 14,
   "important_limitations": [
-    "KEGG organism validation now uses the valid HTTPS /list/aor request; KO values remain blank when KEGG supplies no link",
-    "Broad KEGG pathway membership is a coarse subsystem proxy and should be reviewed before biological interpretation",
-    "A glycosylation_role of none means not assigned in this pass, not experimentally proven absent",
-    "Functional evidence is not upgraded by transcriptomic significance",
-    "Conflicting UniProt candidates are withheld and flagged rather than selected automatically"
+    "KEGG does not provide a functional-group link for every gene; missing values remain blank",
+    "A broad KEGG pathway is lower-confidence evidence for a gene's secretion stage and should be reviewed",
+    "No assigned glycosylation role means not identified in this pass, not experimentally proven absent",
+    "An expression response does not make a gene's functional description more certain",
+    "When UniProt provides several candidates, all are withheld from the final gene row and flagged for review"
   ]
 }
