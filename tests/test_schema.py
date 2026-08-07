@@ -25,11 +25,18 @@ def test_no_orphan_definitions():
 
 
 def test_data_dictionary_has_structured_provenance():
-    required = {"definition", "allowed_values", "source"}
+    required = {"definition", "allowed_values", "value_meanings", "blank_means", "source"}
     for name, entry in DATA_DICTIONARY.items():
         assert set(entry) == required, f"{name}: incomplete dictionary metadata"
         assert entry["source"] in {"Liu 2014", "fetched", "generated"}
-        assert all(str(entry[key]).strip() for key in required)
+        assert all(str(entry[key]).strip() for key in {"definition", "allowed_values", "blank_means", "source"})
+
+
+def test_dictionary_explains_confidence_mapping_and_blank_roles():
+    assert "high =" in DATA_DICTIONARY["subsystem_confidence"]["value_meanings"]
+    assert "medium =" in DATA_DICTIONARY["glycosylation_role_confidence"]["value_meanings"]
+    assert "glycosylation_role is none" in DATA_DICTIONARY["glycosylation_role_source"]["blank_means"]
+    assert "exact =" in DATA_DICTIONARY["mapping_status"]["value_meanings"]
 
 
 def test_exported_column_descriptions_match_schema():
@@ -70,4 +77,3 @@ def test_subsystem_order_is_monotonic_and_unique():
     values = list(SUBSYSTEM_ORDER.values())
     assert len(values) == len(set(values)), "duplicate pathway_order values"
     assert values == sorted(values), "SUBSYSTEM_ORDER should read in pathway order"
-
